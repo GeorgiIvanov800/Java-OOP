@@ -17,6 +17,11 @@ public class CardRankMain {
         KING
     }
     public static void main(String[] args) {
+        CardRanks[] values = CardRanks.values();
+        System.out.println("Card Ranks:");
 
+        for (CardRanks value : values) {
+            System.out.println("Ordinal value: " + value.ordinal() + "; Name value: " + value);
+        }
     }
 }
