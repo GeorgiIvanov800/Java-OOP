@@ -32,6 +32,7 @@ public class XCardRankAndCardSuitMain {
     }
     public static void main(String[] args) {
         String command = new Scanner(System.in).nextLine();
+        System.out.println(command + ":");
 
         if (command.equals("Card Ranks")) {
             printEnumOrdinalsAndNames(CardRanks.values());
