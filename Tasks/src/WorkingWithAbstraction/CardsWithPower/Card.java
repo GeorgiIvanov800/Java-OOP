@@ -14,7 +14,7 @@ public class Card {
         DIAMONDS(13),
         HEARTS(26),
         SPADES(39);
-        int power;
+        final int power;
         Suit(int power) {
             this.power = power;
         }
@@ -36,7 +36,7 @@ public class Card {
         JACK(11),
         QUEEN(12),
         KING(13);
-        int power;
+        final int power;
         Rank(int power) {
             this.power = power;
         }
