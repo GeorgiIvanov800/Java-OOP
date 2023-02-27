@@ -30,13 +30,13 @@ public class Person {
          if (this.getAge() < 30) {
              actualBonus /= 2;
          }
-         double newSalary = salary * (1 + actualBonus / 100);
-         salary = newSalary;
+        salary = salary * (1 + actualBonus / 100);
     }
 
     @Override
     public String toString() {
 
-        return String.format("%s %s is %d years old.",firstName, lastName, age);
+        //return String.format("%s %s is %d years old.",firstName, lastName, age);
+        return String.format("%s %s gets %.2f leva", getFirstName(), this.lastName, salary);
     }
 }
