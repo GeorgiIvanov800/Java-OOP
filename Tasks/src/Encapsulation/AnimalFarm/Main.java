@@ -2,7 +2,7 @@ package Encapsulation.AnimalFarm;
 
 import java.util.Scanner;
 
-public class AnimalFarmMain {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -10,6 +10,7 @@ public class AnimalFarmMain {
         int age = Integer.parseInt(scanner.nextLine());
 
         Chicken chicken = new Chicken(name, age);
-        System.out.println(chicken.toString());
+
+        System.out.println(chicken);
     }
 }
