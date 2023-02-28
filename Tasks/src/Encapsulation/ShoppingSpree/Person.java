@@ -24,8 +24,13 @@ public class Person {
         this.money = money;
     }
 
-    public void byeProduct() {
-        throw  new IllegalArgumentException("TODO");
+    public void byeProduct(Product product) {
+        if (product.getCost() > money) {
+            throw new IllegalStateException(this.getName() + " can't afford " + product.getName());
+        }
+
+        this.money -= product.getCost();
+        this.products.add(product);
     }
 
     public String getName() {
