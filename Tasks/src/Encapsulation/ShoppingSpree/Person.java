@@ -1,5 +1,6 @@
 package Encapsulation.ShoppingSpree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -8,14 +9,19 @@ public class Person {
     private List<Product> products;
 
     public Person(String name, double money) {
-        throw  new IllegalArgumentException("TODO");
+        setName(name);
+        setMoney(money);
+        this.products = new ArrayList<>();
     }
 
-    private void setName() {
-        throw  new IllegalArgumentException("TODO");
+
+    private void setName(String name) {
+        Validation.validateName(name);
+        this.name = name;
     }
-    private void setMoney() {
-        throw  new IllegalArgumentException("TODO");
+    private void setMoney(double money) {
+        Validation.validateMoney(money);
+        this.money = money;
     }
 
     public void byeProduct() {

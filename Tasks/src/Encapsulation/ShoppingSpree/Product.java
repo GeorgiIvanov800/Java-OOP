@@ -10,16 +10,12 @@ public class Product {
     }
 
     private void setCost(double cost) {
-        if (cost <= 0) {
-            throw new IllegalArgumentException("Money cannot be negative");
-        }
+        Validation.validateMoney(cost);
         this.cost = cost;
     }
 
     private void setName(String name) {
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be empty");
-        }
+        Validation.validateName(name);
         this.name = name;
     }
 
