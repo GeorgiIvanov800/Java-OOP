@@ -1,6 +1,7 @@
 package Encapsulation.ShoppingSpree;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Person {
@@ -37,5 +38,7 @@ public class Person {
         return this.name;
     }
 
-
+    public List<Product> getProducts() {
+        return Collections.unmodifiableList(products);
+    }
 }

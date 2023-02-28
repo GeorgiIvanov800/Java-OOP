@@ -9,7 +9,7 @@ public class Validation {
 
 
     public static void validateMoney(double cost) {
-        if (cost <= 0) {
+        if (cost < 0) {
             throw new IllegalArgumentException("Money cannot be negative");
         }
     }
