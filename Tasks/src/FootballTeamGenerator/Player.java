@@ -56,7 +56,7 @@ public class Player {
 
     public double getOverallSKilLevel() {
         return (this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / (double) 5;
-    }
+    }                                                                                      // can use "5." or "5D"
 
     private static void validateStat(int statValue, String statName) {
         if (statValue < 0 || statValue > 100) {
