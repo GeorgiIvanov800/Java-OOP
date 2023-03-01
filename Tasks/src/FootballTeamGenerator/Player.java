@@ -1,20 +1,32 @@
 package FootballTeamGenerator;
 
+import java.util.IllegalFormatCodePointException;
+
 public class Player {
 
     private String name;
     private int endurance;
-    private int spring;
+    private int sprint;
     private int dribble;
     private int passing;
     private int shooting;
 
-    public Player(String name, int endurance, int spring, int dribble, int passing, int shooting) {
-        throw new IllegalStateException("TODO");
+    public Player(String name, int endurance, int sprint, int dribble, int passing, int shooting) {
+        setName(name);
+        setEndurance(endurance);
+        setSprint(sprint);
+        setDribble(dribble);
+        setPassing(passing);
+        setShooting(shooting);
     }
 
     private void setName(String name) {
-        throw new IllegalStateException("TODO");
+
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("A name should not be empty.");
+        }
+
+        this.name = name;
     }
 
     public String getName() {
@@ -22,26 +34,37 @@ public class Player {
     }
 
     private void setEndurance(int endurance) {
-        throw new IllegalStateException("TODO");
+        validateStat(endurance, "Endurance");
+        this.endurance = endurance;
     }
 
-    private void setSpring(int spring) {
-        throw new IllegalStateException("TODO");
+    private void setSprint(int sprint) {
+        validateStat(sprint, "Sprint");
+        this.sprint = sprint;
     }
 
     private void setDribble(int dribble) {
-        throw new IllegalStateException("TODO");
+        validateStat(dribble, "Dribble");
+        this.dribble = dribble;
     }
 
     private void setPassing(int passing) {
+        validateStat(passing,"Passing");
         this.passing = passing;
     }
 
     private void setShooting(int shooting) {
+        validateStat(shooting,"Shooting");
         this.shooting = shooting;
     }
 
-    private double overallSKilLevel() {
-        throw new IllegalStateException("TODO");
+    private double getOverallSKilLevel() {
+        return (this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / (double) 5;
+    }
+
+    private void validateStat(int endurance, String statName) {
+        if (endurance < 0 || endurance > 100) {
+            throw new IllegalArgumentException(statName + " should be between 0 and 100.");
+        }
     }
 }
