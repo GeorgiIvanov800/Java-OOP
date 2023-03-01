@@ -1,4 +1,4 @@
-package FootballTeamGenerator;
+package Encapsulation.FootballTeamGenerator;
 
 import java.util.HashMap;
 import java.util.Map;

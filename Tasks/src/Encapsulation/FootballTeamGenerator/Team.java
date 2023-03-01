@@ -1,7 +1,6 @@
-package FootballTeamGenerator;
+package Encapsulation.FootballTeamGenerator;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class Team {
     private String name;

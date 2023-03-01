@@ -1,4 +1,4 @@
-package FootballTeamGenerator;
+package Encapsulation.FootballTeamGenerator;
 
 public class Validators {
     public static void validateName(String name) {

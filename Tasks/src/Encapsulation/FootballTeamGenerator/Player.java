@@ -1,6 +1,4 @@
-package FootballTeamGenerator;
-
-import java.util.IllegalFormatCodePointException;
+package Encapsulation.FootballTeamGenerator;
 
 public class Player {
 
