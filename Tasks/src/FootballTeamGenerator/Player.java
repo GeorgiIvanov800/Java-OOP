@@ -21,11 +21,7 @@ public class Player {
     }
 
     private void setName(String name) {
-
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("A name should not be empty.");
-        }
-
+        Validators.validateName(name);
         this.name = name;
     }
 
@@ -58,12 +54,12 @@ public class Player {
         this.shooting = shooting;
     }
 
-    private double getOverallSKilLevel() {
+    public double getOverallSKilLevel() {
         return (this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / (double) 5;
     }
 
-    private void validateStat(int endurance, String statName) {
-        if (endurance < 0 || endurance > 100) {
+    private static void validateStat(int statValue, String statName) {
+        if (statValue < 0 || statValue > 100) {
             throw new IllegalArgumentException(statName + " should be between 0 and 100.");
         }
     }
