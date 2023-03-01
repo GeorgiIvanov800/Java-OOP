@@ -40,26 +40,38 @@ public class FootballTeamGeneratorMain {
         Team team = teamsByName.get(teamName);
         if (team == null) return;
 
-        System.out.println(team.getName()  + " - " + team.getRating());
+        System.out.println(team.getName()  + " - " + (int)team.getRating());
     }
 
     private static void handleRemovePlayer(String teamName, String playerName, Map<String, Team> teamsByName) {
         Team team = teamsByName.get(teamName);
         if (team == null) return;
 
-        team.removePlayer(playerName);
+        try {
+            team.removePlayer(playerName);
+
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private static void handleAddPlayer(String teamName, String playerName, String enduranceStr, String sprintStr, String dribbleStr, String passingStr, String shootingStr, Map<String, Team> teamsByName) {
         Team team = getTeamOrPrintNotFound(teamName, teamsByName);
         if (team == null) return;
+        Player player;
+        try {
+             player = new Player(playerName,
+                    Integer.parseInt(enduranceStr),
+                    Integer.parseInt(sprintStr),
+                    Integer.parseInt(dribbleStr),
+                    Integer.parseInt(passingStr),
+                    Integer.parseInt(shootingStr));
 
-        Player player = new Player(playerName,
-                Integer.parseInt(enduranceStr),
-                Integer.parseInt(sprintStr),
-                Integer.parseInt(dribbleStr),
-                Integer.parseInt(passingStr),
-                Integer.parseInt(shootingStr));
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
+
         team.addPLayer(player);
     }
 
