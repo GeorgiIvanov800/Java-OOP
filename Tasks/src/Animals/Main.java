@@ -4,9 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal();
         animal.eat();
+        Puppy puppy = new Puppy();
 
-        Dog dog = new Dog();
-        dog.eat();
-        dog.bark();
+        puppy.bark();
+        puppy.eat();
+        puppy.weep();
     }
 }
