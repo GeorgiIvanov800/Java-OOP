@@ -9,5 +9,8 @@ public class Main {
         puppy.weep();
         puppy.bark();
         puppy.eat();
+        Cat cat = new Cat();
+        cat.meow();
+        cat.eat();
     }
 }
