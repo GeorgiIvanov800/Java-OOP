@@ -5,9 +5,9 @@ public class Main {
         Animal animal = new Animal();
         animal.eat();
         Puppy puppy = new Puppy();
-
+        System.out.println();
+        puppy.weep();
         puppy.bark();
         puppy.eat();
-        puppy.weep();
     }
 }
