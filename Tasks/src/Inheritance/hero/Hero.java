@@ -1,20 +1,20 @@
-package Hero;
+package Inheritance.hero;
 
 public class Hero {
-    private String userName;
+    private String username;
     private int level;
 
-    public Hero(String userName, int level) {
-        this.userName = userName;
+    public Hero(String username, int level) {
+        this.username = username;
         this.level = level;
     }
 
     public String getUsername() {
-        return this.userName;
+        return username;
     }
 
     public int getLevel() {
-        return this.level;
+        return level;
     }
 
     @Override
