@@ -1,4 +1,4 @@
-package NeedForSpeed;
+package Inheritance.NeedForSpeed;
 public class Vehicle {
     public static final double DEFAULT_FUEL_CONSUMPTION = 1.25;
 

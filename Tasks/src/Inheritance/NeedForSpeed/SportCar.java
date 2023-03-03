@@ -1,4 +1,4 @@
-package NeedForSpeed;
+package Inheritance.NeedForSpeed;
 
 public class SportCar extends Car {
     public static final double DEFAULT_FUEL_CONSUMPTION = 10;
