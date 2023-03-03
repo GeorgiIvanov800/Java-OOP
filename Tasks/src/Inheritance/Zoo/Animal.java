@@ -1,4 +1,4 @@
-package Zoo;
+package Inheritance.Zoo;
 
 public class Animal {
     private String name;
