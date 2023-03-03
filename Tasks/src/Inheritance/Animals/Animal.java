@@ -1,4 +1,4 @@
-package Animals;
+package Inheritance.Animals;
 
 public class Animal {
 

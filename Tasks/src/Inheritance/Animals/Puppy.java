@@ -1,4 +1,4 @@
-package Animals;
+package Inheritance.Animals;
 
 public class Puppy extends Dog {
     public void weep() {
