@@ -9,6 +9,14 @@ public class Seat extends CarImpl implements Sellable{
 
     @Override
     public double getPrice() {
-        return 0;
+        return this.price;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s%n%s sells for %f",
+                super.toString(),
+                getModel(),
+                getPrice());
     }
 }

@@ -1,6 +1,6 @@
 package CarExtended;
 
-public interface Rentable {
+public interface Rentable extends Car{
     int getMinRentDay();
 
     double getPricePerDay();
