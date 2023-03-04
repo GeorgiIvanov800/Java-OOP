@@ -1,4 +1,4 @@
-package Animals;
+package Inheritance.Animals;
 
 public class Tomcat extends Cat {
     public Tomcat(String name, int age) {

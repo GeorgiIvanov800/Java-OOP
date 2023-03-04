@@ -1,4 +1,4 @@
-package CarExtended;
+package InterfacesAndAbstraction.CarShop.CarExtended;
 
 public class Seat extends CarImpl implements Sellable{
     private double price;

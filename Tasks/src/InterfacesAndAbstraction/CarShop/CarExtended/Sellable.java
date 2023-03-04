@@ -1,4 +1,4 @@
-package CarExtended;
+package InterfacesAndAbstraction.CarShop.CarExtended;
 
 public interface Sellable extends Car{
 

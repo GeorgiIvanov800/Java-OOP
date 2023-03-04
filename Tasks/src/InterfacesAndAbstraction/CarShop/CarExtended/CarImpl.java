@@ -1,4 +1,4 @@
-package CarExtended;
+package InterfacesAndAbstraction.CarShop.CarExtended;
 
 public class CarImpl implements Car {
     private String model;
