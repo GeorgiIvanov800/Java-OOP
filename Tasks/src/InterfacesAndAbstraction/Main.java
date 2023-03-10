@@ -1,4 +1,7 @@
-package InterfacesAndAbstraction.CarShop;
+package InterfacesAndAbstraction;
+
+import InterfacesAndAbstraction.CarShop.Car;
+import InterfacesAndAbstraction.CarShop.Seat;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package InterfacesAndAbstraction.CarShop.CarExtended;
+package InterfacesAndAbstraction.CarExtended;
 
 public class Main {
     public static void main(String[] args) {
