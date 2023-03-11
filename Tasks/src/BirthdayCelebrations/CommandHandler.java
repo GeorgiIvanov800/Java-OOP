@@ -1,5 +1,6 @@
 package BirthdayCelebrations;
 
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class CommandHandler {
@@ -9,6 +10,7 @@ public abstract class CommandHandler {
     }
 
     public void readAndHandleCommandsToEnd(Scanner scanner) {
+
         boolean reachedEnd = this.handleCommand(scanner.nextLine());
         while (!reachedEnd) {
             reachedEnd = this.handleCommand(scanner.nextLine());
@@ -22,4 +24,5 @@ public abstract class CommandHandler {
         return false;
     }
     protected abstract void processNonEndCommand(String command);
+
 }

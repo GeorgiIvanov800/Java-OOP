@@ -1,6 +1,6 @@
 package BirthdayCelebrations;
 
-public class Pet implements Birhtable{
+public class Pet implements Birhtable {
     private String name;
     private String birthDate;
 
