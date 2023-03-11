@@ -1,4 +1,4 @@
-package DefineAndInterfacePerson;
+package InterfacesAndAbstraction.DefineAndInterfacePerson;
 
 public class Citizen implements Person, Birthable, Identifiable{
     private String name;

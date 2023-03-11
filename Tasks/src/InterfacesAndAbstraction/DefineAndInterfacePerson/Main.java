@@ -1,4 +1,4 @@
-package DefineAndInterfacePerson;
+package InterfacesAndAbstraction.DefineAndInterfacePerson;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
