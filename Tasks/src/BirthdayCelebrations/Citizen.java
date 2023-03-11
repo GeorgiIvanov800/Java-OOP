@@ -17,12 +17,15 @@ public class Citizen implements Birhtable, Identifiable{
         return this.name;
     }
 
+    public int getAge() {
+        return this.age;
+    }
+
     @Override
     public String getBirthDate() {
         return this.birthDate;
     }
-
-    @Override
+     @Override
     public String getId() {
         return this.id;
     }
