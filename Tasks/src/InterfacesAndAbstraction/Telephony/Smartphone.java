@@ -2,14 +2,14 @@ package InterfacesAndAbstraction.Telephony;
 
 import java.util.List;
 
-public class Smartphone {
+public class Smartphone implements Callable, Browsable {
     private List<String> numbers;
     private List<String> urls;
     public Smartphone(List<String> numbers, List<String> urls) {
         this.numbers = numbers;
         this.urls = urls;
     }
-
+@Override
     public String call() {
         StringBuilder resultBuilder = new StringBuilder();
         for (String number : numbers) {
@@ -22,7 +22,7 @@ public class Smartphone {
         }
         return resultBuilder.toString();
     }
-
+@Override
     public String browse() {
         StringBuilder resultBuilder = new StringBuilder();
         for (String url : urls) {
