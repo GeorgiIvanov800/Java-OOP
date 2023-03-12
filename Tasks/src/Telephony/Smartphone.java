@@ -7,8 +7,8 @@ public class Smartphone {
     private List<String> numbers;
     private List<String> urls;
     public Smartphone(List<String> numbers, List<String> urls) {
-        this.numbers = new ArrayList<>();
-        this.urls = new ArrayList<>();
+        this.numbers = numbers;
+        this.urls = urls;
     }
 
     public String call() {
