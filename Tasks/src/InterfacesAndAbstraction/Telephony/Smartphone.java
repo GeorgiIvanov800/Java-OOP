@@ -1,6 +1,5 @@
-package Telephony;
+package InterfacesAndAbstraction.Telephony;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Smartphone {
