@@ -16,5 +16,11 @@ public class MathOperation {
         return add(a , b,  c) + d;
     }
 
+    public String getDocument(String title, String header, String body, String footer) {
+        return  title + header + body + footer;
+    }
 
+    public String getDocument(String title, String body) {
+        return getDocument(title, null, body, null);
+    }
 }
