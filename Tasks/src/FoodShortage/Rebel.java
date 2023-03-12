@@ -5,5 +5,5 @@ public class Rebel {
     private int age;
     private String group;
     private int food;
-    
+
 }
