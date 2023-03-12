@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<X> buyersByName = new ArrayList<>();
+        List<BuyingPerson> buyersByName = new ArrayList<>();
 
         int numPeople = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < numPeople; i++) {
@@ -26,6 +26,7 @@ public class Main {
                     throw new IllegalStateException("Unknown input " + paramsString);
             }
         }
+
 
     }
 }

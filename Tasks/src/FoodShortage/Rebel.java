@@ -8,7 +8,7 @@ public class Rebel extends BuyingPerson implements Buyer { private String group;
         this.group = group;
     }
     public String getGroup() {
-        return group;
+        return this.group;
     }
 
     @Override
