@@ -5,7 +5,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         List<BuyingPerson> buyingPeople = new ArrayList<>();
 
         int numPeople = Integer.parseInt(scanner.nextLine());
