@@ -3,7 +3,13 @@ package FoodShortage;
 public abstract class BuyingPerson implements Person, Buyer {
     private String name;
     private int age;
-    private int food;
+    protected int food;
+
+    public BuyingPerson(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.food = 0;
+    }
 
     public String getName() {
         return this.name;

@@ -1,27 +1,12 @@
 package FoodShortage;
 
-public class Rebel implements Person, Buyer {
-    private String name;
-    private int age;
-    private String group;
-    private int food;
+public class Rebel extends BuyingPerson implements Buyer { private String group;
+
 
     public Rebel(String name, int age, String group) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.group = group;
     }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public int getAge() {
-        return age;
-    }
-
     public String getGroup() {
         return group;
     }
@@ -31,8 +16,4 @@ public class Rebel implements Person, Buyer {
     this.food += 5;
     }
 
-    @Override
-    public int getFood() {
-        return food;
-    }
 }
