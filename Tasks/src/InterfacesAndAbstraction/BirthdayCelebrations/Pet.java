@@ -1,4 +1,4 @@
-package BirthdayCelebrations;
+package InterfacesAndAbstraction.BirthdayCelebrations;
 
 public class Pet implements Birhtable {
     private String name;

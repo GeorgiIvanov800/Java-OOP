@@ -1,6 +1,5 @@
-package BirthdayCelebrations;
+package InterfacesAndAbstraction.BirthdayCelebrations;
 
-import java.util.List;
 import java.util.Scanner;
 
 public abstract class CommandHandler {
@@ -21,6 +20,7 @@ public abstract class CommandHandler {
         if (command.equals(this.endCommand)) {
             return true;
         }
+        processNonEndCommand(command);
         return false;
     }
     protected abstract void processNonEndCommand(String command);

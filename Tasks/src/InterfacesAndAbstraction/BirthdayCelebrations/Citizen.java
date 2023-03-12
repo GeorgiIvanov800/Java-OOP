@@ -1,4 +1,4 @@
-package BirthdayCelebrations;
+package InterfacesAndAbstraction.BirthdayCelebrations;
 
 public class Citizen implements Birhtable, Identifiable{
     private String name;

@@ -1,4 +1,4 @@
-package BirthdayCelebrations;
+package InterfacesAndAbstraction.BirthdayCelebrations;
 
 import java.util.Scanner;
 

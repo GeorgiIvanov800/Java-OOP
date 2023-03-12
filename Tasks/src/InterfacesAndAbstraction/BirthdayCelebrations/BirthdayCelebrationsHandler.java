@@ -1,5 +1,4 @@
-package BirthdayCelebrations;
-import InterfacesAndAbstraction.DefineAndInterfacePerson.Birthable;
+package InterfacesAndAbstraction.BirthdayCelebrations;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,6 @@ public class BirthdayCelebrationsHandler extends CommandHandler {
     protected void processNonEndCommand(String command) {
         String[] parameters = command.split("\\s+");
         Birhtable b;
-        
         switch (parameters[0]) {
             case "Citizen":
                  b = new Citizen(parameters[1], Integer.parseInt(parameters[2]), parameters[3], parameters[4]);
