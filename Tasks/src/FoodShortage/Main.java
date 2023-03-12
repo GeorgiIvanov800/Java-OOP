@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<BuyingPerson> buyersByName = new ArrayList<>();
+        List<BuyingPerson> buyingPeople = new ArrayList<>();
 
         int numPeople = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < numPeople; i++) {
@@ -16,16 +16,22 @@ public class Main {
             switch (personParams.length) {
                 case 3:
                     Rebel rebel = new Rebel(personParams[0], Integer.parseInt(personParams[1]), personParams[2]);
-                    buyersByName.add(rebel);
+                    buyingPeople.add(rebel);
                     break;
                 case 4:
                     Citizen citizen = new Citizen(personParams[0], Integer.parseInt(personParams[1]), personParams[2], personParams[3]);
-                   buyersByName.add(citizen);
+                   buyingPeople.add(citizen);
                     break;
                 default:
                     throw new IllegalStateException("Unknown input " + paramsString);
             }
         }
+        FoodShortageHandler handler = new FoodShortageHandler(buyingPeople, "End");
+
+        handler.readAndHandleCommandsToEnd(scanner);
+
+        System.out.println(buyingPeople.stream()
+                .mapToInt(BuyingPerson::getFood).sum());
 
 
     }
