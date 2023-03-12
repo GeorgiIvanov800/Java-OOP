@@ -1,4 +1,4 @@
-package FoodShortage;
+package InterfacesAndAbstraction.FoodShortage;
 
 public class Rebel extends BuyingPerson implements Buyer { private String group;
 

@@ -1,4 +1,4 @@
-package FoodShortage;
+package InterfacesAndAbstraction.FoodShortage;
 
 public class Citizen extends BuyingPerson implements Identifiable {
     private String id;

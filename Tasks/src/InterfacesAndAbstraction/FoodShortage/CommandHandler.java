@@ -1,4 +1,4 @@
-package FoodShortage;
+package InterfacesAndAbstraction.FoodShortage;
 
 import java.util.Scanner;
 

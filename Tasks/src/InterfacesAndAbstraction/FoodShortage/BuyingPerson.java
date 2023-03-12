@@ -1,4 +1,4 @@
-package FoodShortage;
+package InterfacesAndAbstraction.FoodShortage;
 
 public abstract class BuyingPerson implements Person, Buyer {
     private String name;
