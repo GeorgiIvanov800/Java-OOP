@@ -1,4 +1,4 @@
-package Animals;
+package Polymorphism.Animals;
 
 public class Dog extends Animal {
     protected Dog(String name, String favouriteFood) {

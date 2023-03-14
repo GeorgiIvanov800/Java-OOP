@@ -1,4 +1,4 @@
-package Animals;
+package Polymorphism.Animals;
 
 public abstract class Animal {
     private String name;
