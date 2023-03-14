@@ -8,13 +8,31 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        while (!input.equals("END")) {
+        while (!input.equals("End")) {
             String[] animalParts = input.split("\\s+");
+            String[] foodParts = scanner.nextLine().split("\\s+");
 
             Animal animal = createAnimal(animalParts);
+            Food food = createFood(foodParts);
 
+            animal.makeSound();
+            animal.eat(food);
+            System.out.println(animal);
 
+            input = scanner.nextLine();
         }
+    }
+
+    private static Food createFood(String[] foodParts) {
+        FoodType type = FoodType.valueOf(foodParts[0]);
+        int quantity =  Integer.parseInt(foodParts[1]);
+
+        if (type == FoodType.Meat) {
+            return new Meat(quantity);
+        } else if (type == FoodType.Vegetable) {
+            return new Vegetable(quantity);
+        }
+        return null;
     }
 
     private static Animal createAnimal(String[] animalParts) {

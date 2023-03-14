@@ -6,4 +6,10 @@ public abstract class Food {
     protected Food(int quantity) {
         this.quantity = quantity;
     }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+
 }
