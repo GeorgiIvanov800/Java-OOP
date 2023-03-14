@@ -1,4 +1,4 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
 public enum AnimalType {
     Cat,

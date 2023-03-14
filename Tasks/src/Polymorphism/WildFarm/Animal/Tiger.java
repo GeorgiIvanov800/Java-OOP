@@ -1,7 +1,7 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
-import WildFarm.Food;
-import WildFarm.Meat;
+import Polymorphism.WildFarm.Food;
+import Polymorphism.WildFarm.Meat;
 
 public class Tiger extends Feline {
     private String livingRegion;

@@ -1,6 +1,6 @@
-package WildFarm;
+package Polymorphism.WildFarm;
 
-import WildFarm.Animal.*;
+import Polymorphism.WildFarm.Animal.*;
 
 import java.util.Scanner;
 

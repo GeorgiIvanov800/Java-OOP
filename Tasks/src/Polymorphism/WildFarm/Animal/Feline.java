@@ -1,4 +1,4 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
 public abstract class Feline extends Mammal {
 

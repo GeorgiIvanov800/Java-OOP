@@ -1,7 +1,7 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
-import WildFarm.Food;
-import WildFarm.Vegetable;
+import Polymorphism.WildFarm.Food;
+import Polymorphism.WildFarm.Vegetable;
 
 public class Zebra extends Mammal {
     public Zebra(String name, double weight, String region) {

@@ -1,6 +1,6 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
-import WildFarm.Food;
+import Polymorphism.WildFarm.Food;
 
 public abstract class Animal {
     private String name;

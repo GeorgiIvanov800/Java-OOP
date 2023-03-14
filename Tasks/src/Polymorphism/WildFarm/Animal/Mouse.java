@@ -1,6 +1,6 @@
-package WildFarm.Animal;
+package Polymorphism.WildFarm.Animal;
 
-import WildFarm.Food;
+import Polymorphism.WildFarm.Food;
 
 public class Mouse extends Mammal {
     public Mouse(String name, double weight, String region) {
