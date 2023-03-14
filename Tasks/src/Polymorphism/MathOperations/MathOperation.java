@@ -1,4 +1,4 @@
-package MathOperations;
+package Polymorphism.MathOperations;
 
 public class MathOperation {
 
