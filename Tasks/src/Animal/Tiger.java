@@ -2,10 +2,11 @@ package Animal;
 
 import WildFarm.Food;
 
-public class Mouse extends Mammal {
+public class Tiger extends Feline {
+    private String livingRegion;
     @Override
     public void makeSound() {
-        System.out.println("SQUEEEAAAK!");
+        System.out.println("ROAAR!!!");
     }
 
     @Override
