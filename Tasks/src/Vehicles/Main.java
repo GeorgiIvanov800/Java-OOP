@@ -1,5 +1,6 @@
 package Vehicles;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,13 +13,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String carInfo = scanner.nextLine();
-        String truckInfo = scanner.nextLine();
+        DecimalFormat decimalFormat = new DecimalFormat("###.##");
+
+        String[] carInfoParams = scanner.nextLine().split("\\s+");
+        String[] truckInfoParams = scanner.nextLine().split("\\s+");
 
         Map<String, Vehicle> vehiclesByName = new LinkedHashMap<>();
-
-        vehiclesByName.put(CAR_NAME,new Car());
-        vehiclesByName.put(TRUCK_NAME,new Truck());
+        vehiclesByName.put(CAR_NAME, new Car(Double.parseDouble(carInfoParams[1]), Double.parseDouble(carInfoParams[2])));
+        vehiclesByName.put(TRUCK_NAME, new Truck(Double.parseDouble(truckInfoParams[1]), Double.parseDouble(truckInfoParams[2])));
 
         int numCommands = Integer.parseInt(scanner.nextLine());
 
@@ -30,9 +32,9 @@ public class Main {
 
             switch (operation) {
                 case "Drive":
-                    boolean successfulDrive = vehicle.drive(Double.parseDouble(commandParts[2]));
-                    if (successfulDrive) {
-                        System.out.printf("");
+                    Double travelledKm = vehicle.drive(Double.parseDouble(commandParts[2]));
+                    if (travelledKm != null) {
+                        System.out.println(vehicleName + " travelled " + decimalFormat.format(travelledKm) + " km");
                     } else {
                         System.out.println(vehicleName + " needs refueling");
                     }
@@ -45,7 +47,7 @@ public class Main {
             }
         }
 
-        System.out.println(String.format("Car: %.2f", vehiclesByName.get(CAR_NAME).getFuelQuantity()));
-        System.out.println(String.format("Truck: %.2f", vehiclesByName.get(TRUCK_NAME).getFuelQuantity()));
+        System.out.println("Car: " + String.format("%.2f", vehiclesByName.get(CAR_NAME).getFuelQuantity()));
+        System.out.println("Truck: " + String.format("%.2f", vehiclesByName.get(TRUCK_NAME).getFuelQuantity()));
     }
 }

@@ -1,13 +1,17 @@
 package Vehicles;
 
 public class Truck extends Vehicle {
-    @Override
-    public void drive(double distance) {
-        throw new IllegalStateException("TODO");
+    public Truck(double fuelQuantity, double litersPerKm) {
+        super(fuelQuantity, litersPerKm);
     }
 
     @Override
-    public void refuel(double liters) {
-        throw new IllegalStateException("TODO");
+    protected double getExtraFuelConsumption() {
+        return 1.6;
+    }
+
+    @Override
+    protected double calculateRefuelLitersAfterLoss(double liters) {
+        return liters * 0.95;
     }
 }
