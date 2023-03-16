@@ -1,4 +1,4 @@
-package Vehicles;
+package Polymorphism.Vehicles;
 
 public abstract class Vehicle {
     private double fuelQuantity;

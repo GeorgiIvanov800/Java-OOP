@@ -1,4 +1,4 @@
-package Vehicles;
+package Polymorphism.Vehicles;
 
 public class Car extends Vehicle {
     public Car(double fuelQuantity, double litersPerKm) {
