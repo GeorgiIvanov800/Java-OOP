@@ -1,5 +1,6 @@
 package Reflection.blackBoxInteger;
 
+import java.lang.reflect.Constructor;
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +8,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Class<BlackBoxInt> blackBoxIntClass = BlackBoxInt.class;
+        try {
+            Constructor<BlackBoxInt> declaredConstructor = blackBoxIntClass.getDeclaredConstructor();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        BlackBoxInt blackBoxInt = new BlackBoxInt();
 
 
         String command = scanner.nextLine();
