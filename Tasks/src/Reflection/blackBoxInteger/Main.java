@@ -14,6 +14,7 @@ public class Main {
         BlackBoxInt blackBoxInt;
         try {
             Constructor<BlackBoxInt> declaredConstructor = blackBoxIntClass.getDeclaredConstructor();
+            declaredConstructor.setAccessible(true);
             blackBoxInt = declaredConstructor.newInstance();
         } catch (NoSuchMethodException | IllegalAccessException | InstantiationException |
                  InvocationTargetException e) {
