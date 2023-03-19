@@ -28,7 +28,8 @@ public class Main {
             String methodName = commandParts[0];
             int parameter = Integer.parseInt(commandParts[1]);
             try {
-                Method declaredMethod = blackBoxIntClass.getDeclaredMethod(methodName, Integer.class);
+                Method declaredMethod = blackBoxIntClass.getDeclaredMethod(methodName, int.class);
+                declaredMethod.setAccessible(true);
                 declaredMethod.invoke(blackBoxInt, parameter);
             } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
                 throw new IllegalStateException(e);
@@ -37,6 +38,7 @@ public class Main {
             int currentValue;
             try {
                 Field innerValue = blackBoxIntClass.getDeclaredField("innerValue");
+                innerValue.setAccessible(true);
                 currentValue = innerValue.getInt(blackBoxInt);
             } catch (NoSuchFieldException | IllegalAccessException e) {
                 throw new RuntimeException(e);
