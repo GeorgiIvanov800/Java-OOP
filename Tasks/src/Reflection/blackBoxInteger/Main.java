@@ -47,6 +47,9 @@ public class Main {
             System.out.println(currentValue);
 
             command = scanner.nextLine();
+
+            String name;
+
         }
     }
 }
