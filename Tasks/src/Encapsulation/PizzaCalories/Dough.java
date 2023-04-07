@@ -59,7 +59,7 @@ public class Dough {
     }
 
     private double getFlourTypeModifier() {
-        
+
         switch (flourType) {
             case "White":
                 return 1.5;
