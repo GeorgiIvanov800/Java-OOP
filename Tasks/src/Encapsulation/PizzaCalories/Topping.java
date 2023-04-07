@@ -32,6 +32,21 @@ public class Topping {
     }
 
     public double calculateCalories() {
-        return 0;
+        return 2 * weight * getModifier();
+    }
+
+    private double getModifier() {
+
+        switch (toppingType) {
+            case "Meat":
+                return 1.2;
+            case "Veggies":
+                return 0.8;
+            case "Cheese":
+                return 1.1;
+            case "Sauce":
+                return 0.9;
+            default: return 0;
+        }
     }
 }
