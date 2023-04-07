@@ -35,6 +35,10 @@ public class Pizza {
         this.toppings.add(topping);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double getOverallCalories() {
         return dough.calculateCalories() + toppings.stream().mapToDouble(Topping::calculateCalories).sum();
     }

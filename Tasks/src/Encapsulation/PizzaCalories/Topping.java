@@ -29,10 +29,11 @@ public class Topping {
             String errorMessage = String.format("%s weight should be in the range [1..50].", toppingType);
             throw new IllegalArgumentException(errorMessage);
         }
+        this.weight = weight;
     }
 
     public double calculateCalories() {
-        return 2 * weight * getModifier();
+        return 2 * this.weight * getModifier();
     }
 
     private double getModifier() {

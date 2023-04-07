@@ -17,6 +17,7 @@ public class Dough {
             case "White":
             case  "Wholegrain":
                     this.flourType = flourType;
+                    break;
             default:
                 throw new IllegalArgumentException("Invalid type of dough.");
         }
@@ -29,6 +30,7 @@ public class Dough {
             case "Chewy":
             case "Homemade":
                 this.bakingTechnique = bakingTechnique;
+                break;
             default: throw new IllegalArgumentException("Invalid type of dough.");
         }
 
